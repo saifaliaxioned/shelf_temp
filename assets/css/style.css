@@ -205,6 +205,10 @@ nav{
 
 /* book-store sec start */
 
+.book-store{
+  padding: 0 0 43px 0;
+}
+
 .info{
   padding: 75px 0 40px 0;
 }
@@ -246,6 +250,34 @@ nav{
 .book-link:hover{
   color: rgb(10,88,136);
   transform: scale(1.2);
+}
+
+.pages{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 40px 0;
+}
+
+.page-list{
+  padding: 0 0.3%;
+}
+
+.pagelink{
+  padding: 18px 24px;
+  background: rgb(234,234,234);
+  color: rgb(151,147,145);
+  transition: all 0.5s ease;
+}
+
+.page-list:first-child .pagelink{
+  background: rgb(5,89,135);
+  color: rgb(255,255,255);
+}
+
+.pagelink:hover{
+  background: rgb(5,89,135);
+  color: rgb(255,255,255);
 }
 
 /* book-store sec end */
