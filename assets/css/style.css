@@ -429,3 +429,51 @@ footer .wrapper{
   } 
 
 }   
+
+/*media query for 480px starts here*/
+@media only screen and (max-width: 480px) {
+
+  /* header start */
+
+  .logo h1{
+    font-size: 34px;
+  }
+
+  .logo p{
+    font-size: 26px;
+  }
+
+  /* header end */
+
+  /* books-store sec start */
+
+  .books {
+    flex-basis: 100%;
+    margin: 10px 1.1%;
+  }
+
+  /* books-store sec end */
+
+  /* help-sec start */
+
+  .help-btn a{
+    font-size: 21px;
+  }
+
+  .help-desc {
+    font-size: 18px;
+  }
+  
+
+  /* help-sec end */
+
+
+  /* footer start */
+
+  .copyright {
+    font-size: 14px;
+  }
+
+  /* footer end */
+
+}  
