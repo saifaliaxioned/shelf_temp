@@ -282,6 +282,19 @@ nav{
 
 /* book-store sec end */
 
+/* help-sec start */
+
+.help-sec .wrapper{
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.help-para{
+  flex-basis: 70%;
+}
+
+/* help-sec end */
+
 
 
 
