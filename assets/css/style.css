@@ -315,8 +315,9 @@ nav{
 
 .help-desc{
   padding: 0 10% 0 0;
-  font-size: 21px;
-  line-height: 32px;
+  font-size: 24px;
+  line-height: 35px;
+  letter-spacing: 1px;
 }
 
 .help-btn{
@@ -329,6 +330,12 @@ nav{
   color: rgb(255,255,255);
   font-size: 23px;
   text-transform: capitalize;
+  transition: all 0.5s ease;
+}
+
+.help-btn a:hover{
+  color: rgb(7,101,153);
+  background: rgb(255,255,255);
 }
 
 /* help-sec end */
@@ -348,7 +355,20 @@ nav{
 =================================*/ 
 
 
+footer{
+  background: rgb(51,51,51);
+  color: rgb(249,241,244);
+}
 
+footer .wrapper{
+  padding: 25px 0;
+  display: flex;
+  justify-content: center;
+}
+
+.copyright{
+  font-size: 23px;
+}
 
 
 
