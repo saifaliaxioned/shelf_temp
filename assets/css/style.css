@@ -203,6 +203,53 @@ nav{
 }
 /* banner end */
 
+/* book-store sec start */
+
+.info{
+  padding: 75px 0 40px 0;
+}
+
+.info-heading{
+  padding: 20px 0;
+  font-size: 33px;
+}
+
+.info-desc{
+  padding: 10px 4% 10px 0;
+  font-size: 21px;
+  line-height: 30px;
+  letter-spacing: 1px;
+}
+
+.book-list{
+  padding: 20px 0;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.books{
+  flex-basis: 23%;
+  margin: 10px 1%;
+}
+
+.book-title{
+  text-align: center;
+}
+
+.book-link{
+  padding: 20px 0;
+  color: rgb(0,0,0);
+  font-size: 22px;
+  transition: all 0.5s ease;
+}
+
+.book-link:hover{
+  color: rgb(10,88,136);
+  transform: scale(1.2);
+}
+
+/* book-store sec end */
+
 
 
 
