@@ -384,3 +384,27 @@ footer .wrapper{
 
 
 }   
+
+/*media query for 768px starts here*/
+@media only screen and (max-width: 768px) {
+
+  /* books-store sec start */
+
+  .books {
+    flex-basis: 31%;
+    margin: 10px 1.1%;
+  }
+
+  /* books-store sec end */
+
+  .image-box {
+    flex-basis: 100%;
+    justify-content: center;
+  }
+
+  .help-para {
+    padding: 30px 7%;
+    flex-basis: 100%;
+  } 
+
+}   
