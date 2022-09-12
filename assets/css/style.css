@@ -284,13 +284,51 @@ nav{
 
 /* help-sec start */
 
+.help-sec{
+  padding-bottom: 79px;
+}
+
 .help-sec .wrapper{
+  background: rgb(7,101,153);
   display: flex;
   flex-wrap: wrap;
 }
 
+.image-box{
+  padding: 95px 68px 30px 0;
+  flex-basis: 30%;
+  display: flex;
+  justify-content: end;
+}
+
 .help-para{
+  padding: 30px 0 30px 0;
   flex-basis: 70%;
+  color: rgb(255,255,255);
+}
+
+.help-heading{
+  padding: 50px 0 25px 0;
+  font-size: 40px;
+  text-transform: capitalize;
+}
+
+.help-desc{
+  padding: 0 10% 0 0;
+  font-size: 21px;
+  line-height: 32px;
+}
+
+.help-btn{
+  padding: 35px 0;
+}
+
+.help-btn a{
+  padding: 19px 4%;
+  border: 1px solid rgb(255,255,255);
+  color: rgb(255,255,255);
+  font-size: 23px;
+  text-transform: capitalize;
 }
 
 /* help-sec end */
