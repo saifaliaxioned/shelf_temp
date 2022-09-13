@@ -8,13 +8,87 @@
    v2.0 | 20110126
    License: none (public domain)
    ========================================================================== */
-html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p,
-blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img,
-ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center,
-dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody,
-tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure,
-figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary,
-time, mark, audio, video {
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
   margin: 0;
   padding: 0;
   border: 0;
@@ -24,22 +98,35 @@ time, mark, audio, video {
 }
 
 /* HTML5 display-role reset for older browsers */
-article, aside, details, figcaption, figure,
-footer, header, hgroup, menu, nav, section {
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
   display: block;
 }
 
 /* Force scrollbar */
-html { overflow-y: scroll; }
+html {
+  overflow-y: scroll;
+}
 
 /* Align radios and text inputs with their label */
 
-input[type='radio'] { vertical-align: text-bottom; }
+input[type="radio"] {
+  vertical-align: text-bottom;
+}
 
 /* Hand cursor on clickable input elements */
 label,
-input[type='button'],
-input[type='submit'],
+input[type="button"],
+input[type="submit"],
 button {
   cursor: pointer;
 }
@@ -50,7 +137,9 @@ strong {
   font-size: inherit;
 }
 
-em { font-style: italic; }
+em {
+  font-style: italic;
+}
 
 img {
   width: 100%;
@@ -66,8 +155,12 @@ sup {
   line-height: 0;
 }
 
-sup { top: -.7em; }
-sub { bottom: -.25em; }
+sup {
+  top: -0.7em;
+}
+sub {
+  bottom: -0.25em;
+}
 
 /* 1.2. Clear Fix
    ========================== */
@@ -78,15 +171,19 @@ sub { bottom: -.25em; }
   content: " ";
 }
 
-.cf:after { clear: both; }
-.cf { *zoom: 1; }
+.cf:after {
+  clear: both;
+}
+.cf {
+  *zoom: 1;
+}
 
 /*for all*/
 
-*{
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
 }
 
 body {
@@ -94,9 +191,9 @@ body {
   font-family: sans-serif;
 }
 
-a { 
+a {
   display: inline-block;
-  text-decoration: none; 
+  text-decoration: none;
 }
 
 li {
@@ -107,13 +204,13 @@ li {
 /*for wrapper*/
 .wrapper {
   max-width: 1360px;
-  width: 93%; 
+  width: 93%;
   margin: 0 auto;
 }
 /*=================================
   Header styling starts here
 =================================*/
-header{
+header {
   width: 100%;
   height: 83vh;
   position: absolute;
@@ -121,251 +218,273 @@ header{
   left: 0;
 }
 
-header .wrapper{
+header .wrapper {
   width: 100%;
   height: 100%;
   position: relative;
 }
 
-#check{
+.hamburger {
+  position: absolute;
+  top: 10px;
+  right: 50px;
+  width: 30px;
+  height: 30px;
   display: none;
-}
-
-.checkbtn{
-  display: none;
-  text-indent: -9999px;
-}
-
-.checkbtn::before{
-  content: "\f0c9";
-  padding: 30px 0;
-  /* display: none; */
-  color: rgb(255,255,255);
-  text-indent: 0;
-  font-family: "FontAwesome";
-  float: right;
-  font-size: 50px;
   cursor: pointer;
 }
 
-.logo{
+.bar {
+  width: 100%;
+  height: 4px;
+  position: absolute;
+  top: 50%;
+  left: 0;
+  display: inline-block;
+  background-color: #000;
+  border-radius: 4px;
+  text-indent: -99999px;
+  transform: translateY(-50%);
+  transition: all .3s;
+}
+
+.bar::before,
+.bar::after {
+  content: "";
+  width: inherit;
+  height: inherit;
+  position: absolute;
+  left: 0;
+  background-color: inherit;
+  transition: all .3s;
+}
+
+.bar::before {
+  top: -13px;
+}
+
+.bar::after {
+  top: 13px;
+}
+
+.hamburger:hover .bar {
+  transform: rotate(45deg);
+}
+.hamburger:hover .bar::before {
+  display: none;
+}
+.hamburger:hover .bar::after {
+  transform: translateY(-13px) rotate(90deg);
+}
+
+.logo {
   padding: 20px 7%;
 }
 
-.logo h1{
+.logo h1 {
   padding: 20px 0 30px 0;
-  color: rgb(255,255,255);
+  color: rgb(255, 255, 255);
   font-size: 57px;
-  text-shadow: 0px 3px 2px rgb(0,0,0);
+  text-shadow: 0px 3px 2px rgb(0, 0, 0);
   text-transform: uppercase;
 }
 
-.logo p{
-  color: rgb(255,255,255);
+.logo p {
+  color: rgb(255, 255, 255);
   font-size: 30px;
-  text-shadow: 1px 3px 3px rgb(0,0,0,0.7);
+  text-shadow: 1px 3px 3px rgb(0, 0, 0, 0.7);
   text-transform: capitalize;
 }
 
-nav{
+nav {
   width: 100%;
   padding: 0 3%;
   position: absolute;
   bottom: 0;
-  background: rgb(0,0,0,0.5);
-  border-bottom:10px solid rgb(10,88,136);
+  background: rgb(0, 0, 0, 0.5);
+  border-bottom: 10px solid rgb(10, 88, 136);
 }
 
-.nav-items{
+.nav-items {
   display: flex;
   justify-content: space-around;
   align-items: center;
 }
 
-.nav-link{
+.nav-link {
   padding: 30px 0;
-  color: rgb(255,255,255);
+  color: rgb(255, 255, 255);
   font-size: 25px;
   text-transform: capitalize;
   transition: all 0.5s ease;
 }
 
-.active-link{
-  color: rgb(149,158,171);
+.active-link {
+  color: rgb(149, 158, 171);
 }
 
-.nav-link:hover{
-  color: rgb(149,158,171);
+.nav-link:hover {
+  color: rgb(149, 158, 171);
 }
-
-
-
-
 
 /*=================================
   Header styling ends here
-=================================*/  
+=================================*/
 
 /*=================================
   main styling starts here
 =================================*/
 
 /* banner start */
-.banner .wrapper{
+.banner .wrapper {
   width: 100%;
 }
 
-.banner-img{
+.banner-img {
   height: 83vh;
 }
 
-.banner-img img{
+.banner-img img {
   height: 100%;
 }
 /* banner end */
 
 /* book-store sec start */
 
-.book-store{
+.book-store {
   padding: 0 0 43px 0;
 }
 
-.info{
+.info {
   padding: 75px 0 40px 0;
 }
 
-.info-heading{
+.info-heading {
   padding: 20px 0;
   font-size: 33px;
 }
 
-.info-desc{
+.info-desc {
   padding: 10px 4% 10px 0;
   font-size: 21px;
   line-height: 30px;
   letter-spacing: 1px;
 }
 
-.book-list{
+.book-list {
   padding: 20px 0;
   display: flex;
   flex-wrap: wrap;
 }
 
-.books{
+.books {
   flex-basis: 23%;
   margin: 10px 1%;
 }
 
-.book-title{
+.book-title {
   text-align: center;
 }
 
-.book-link{
+.book-link {
   padding: 20px 0;
-  color: rgb(0,0,0);
+  color: rgb(0, 0, 0);
   font-size: 22px;
   transition: all 0.5s ease;
 }
 
-.book-link:hover{
-  color: rgb(10,88,136);
+.book-link:hover {
+  color: rgb(10, 88, 136);
   transform: scale(1.2);
 }
 
-.pages{
+.pages {
   display: flex;
   justify-content: center;
   align-items: center;
   padding: 40px 0;
 }
 
-.page-list{
+.page-list {
   padding: 0 0.3%;
 }
 
-.pagelink{
+.pagelink {
   padding: 18px 24px;
-  background: rgb(234,234,234);
-  color: rgb(151,147,145);
+  background: rgb(234, 234, 234);
+  color: rgb(151, 147, 145);
   transition: all 0.5s ease;
 }
 
-.page-list:first-child .pagelink{
-  background: rgb(5,89,135);
-  color: rgb(255,255,255);
+.page-list:first-child .pagelink {
+  background: rgb(5, 89, 135);
+  color: rgb(255, 255, 255);
 }
 
-.pagelink:hover{
-  background: rgb(5,89,135);
-  color: rgb(255,255,255);
+.pagelink:hover {
+  background: rgb(5, 89, 135);
+  color: rgb(255, 255, 255);
 }
 
 /* book-store sec end */
 
 /* help-sec start */
 
-.help-sec{
+.help-sec {
   padding-bottom: 79px;
 }
 
-.help-sec .wrapper{
-  background: rgb(7,101,153);
+.help-sec .wrapper {
+  background: rgb(7, 101, 153);
   display: flex;
   flex-wrap: wrap;
 }
 
-.image-box{
+.image-box {
   padding: 95px 68px 30px 0;
   flex-basis: 30%;
   display: flex;
   justify-content: end;
 }
 
-.help-para{
+.help-para {
   padding: 30px 0 30px 0;
   flex-basis: 70%;
-  color: rgb(255,255,255);
+  color: rgb(255, 255, 255);
 }
 
-.help-heading{
+.help-heading {
   padding: 50px 0 25px 0;
   font-size: 40px;
   text-transform: capitalize;
 }
 
-.help-desc{
+.help-desc {
   padding: 0 10% 0 0;
   font-size: 24px;
   line-height: 35px;
   letter-spacing: 1px;
 }
 
-.help-btn{
+.help-btn {
   padding: 35px 0;
 }
 
-.help-btn a{
+.help-btn a {
   padding: 19px 4%;
-  border: 1px solid rgb(255,255,255);
-  color: rgb(255,255,255);
+  border: 1px solid rgb(255, 255, 255);
+  color: rgb(255, 255, 255);
   font-size: 23px;
   text-transform: capitalize;
   transition: all 0.5s ease;
 }
 
-.help-btn a:hover{
-  color: rgb(7,101,153);
-  background: rgb(255,255,255);
+.help-btn a:hover {
+  color: rgb(7, 101, 153);
+  background: rgb(255, 255, 255);
 }
 
 /* help-sec end */
-
-
-
-
-
-
 
 /*=================================
   main styling ends here
@@ -373,41 +492,78 @@ nav{
 
 /*=================================
   footer styling starts here
-=================================*/ 
+=================================*/
 
-
-footer{
-  background: rgb(51,51,51);
-  color: rgb(249,241,244);
+footer {
+  background: rgb(51, 51, 51);
+  color: rgb(249, 241, 244);
 }
 
-footer .wrapper{
+footer .wrapper {
   padding: 25px 0;
   display: flex;
   justify-content: center;
 }
 
-.copyright{
+.copyright {
   font-size: 23px;
 }
 
-
-
-
- /*=================================
+/*=================================
   footer styling ends here
-=================================*/ 
+=================================*/
 
 /*media query starts*/
 /*media query for 995px starts here*/
 @media only screen and (max-width: 995px) {
-
-
-
-}   
+}
 
 /*media query for 768px starts here*/
 @media only screen and (max-width: 768px) {
+
+  /* header start */
+
+  .hamburger{
+    display: block;
+    z-index: 3;
+  }
+
+  .hamburger:hover + nav{
+    transform: translateX(0);
+  }
+
+  nav{
+    width: 100%;
+    z-index: 2;
+    top: 0;
+    transform: translateX(-100%);
+    transition: all .5s ease;
+  }
+
+  .nav-items{
+    margin: 60px 0 0 0;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .nav-link{
+    display: block;
+  }
+
+  .logo{    
+    padding: 4px 7%;
+  }
+
+  .logo h1{
+    padding: 0px 0 3px 0;
+    font-size: 35px;
+  }
+
+  .logo p{
+    font-size: 22px;
+  }
+
+  /* header end */
 
   /* books-store sec start */
 
@@ -426,20 +582,18 @@ footer .wrapper{
   .help-para {
     padding: 30px 7%;
     flex-basis: 100%;
-  } 
-
-}   
+  }
+}
 
 /*media query for 480px starts here*/
 @media only screen and (max-width: 480px) {
-
   /* header start */
 
-  .logo h1{
+  .logo h1 {
     font-size: 34px;
   }
 
-  .logo p{
+  .logo p {
     font-size: 26px;
   }
 
@@ -456,17 +610,15 @@ footer .wrapper{
 
   /* help-sec start */
 
-  .help-btn a{
+  .help-btn a {
     font-size: 21px;
   }
 
   .help-desc {
     font-size: 18px;
   }
-  
 
   /* help-sec end */
-
 
   /* footer start */
 
@@ -475,5 +627,4 @@ footer .wrapper{
   }
 
   /* footer end */
-
-}  
+}
