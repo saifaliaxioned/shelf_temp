@@ -245,7 +245,7 @@ header .wrapper {
   border-radius: 4px;
   text-indent: -99999px;
   transform: translateY(-50%);
-  transition: all .3s;
+  transition: all 0.3s;
 }
 
 .bar::before,
@@ -256,7 +256,7 @@ header .wrapper {
   position: absolute;
   left: 0;
   background-color: inherit;
-  transition: all .3s;
+  transition: all 0.3s;
 }
 
 .bar::before {
@@ -406,7 +406,7 @@ nav {
 }
 
 .page-list {
-  padding: 0 0.3%;
+  padding: 0 .3%;
 }
 
 .pagelink {
@@ -520,47 +520,46 @@ footer .wrapper {
 
 /*media query for 768px starts here*/
 @media only screen and (max-width: 768px) {
-
   /* header start */
 
-  .hamburger{
+  .hamburger {
     display: block;
     z-index: 3;
   }
 
-  .hamburger:hover + nav{
+  .hamburger:hover + nav {
     transform: translateX(0);
   }
 
-  nav{
+  nav {
     width: 100%;
     z-index: 2;
     top: 0;
     transform: translateX(-100%);
-    transition: all .5s ease;
+    transition: all 0.5s ease;
   }
 
-  .nav-items{
+  .nav-items {
     margin: 60px 0 0 0;
     display: flex;
     flex-direction: column;
   }
 
-  .nav-link{
+  .nav-link {
     padding: 24px 0;
     display: block;
   }
 
-  .logo{    
+  .logo {
     padding: 4px 7%;
   }
 
-  .logo h1{
-    padding: 0px 0 3px 0;
+  .logo h1 {
+    padding: 0 0 3px 0;
     font-size: 35px;
   }
 
-  .logo p{
+  .logo p {
     font-size: 22px;
   }
 
@@ -625,6 +624,35 @@ footer .wrapper {
 
   .copyright {
     font-size: 14px;
+  }
+
+  /* footer end */
+}
+
+/*media query for 375px starts here*/
+@media only screen and (max-width: 375px) {
+  /* book-store sec start */
+
+  .info-desc {
+    padding: 10px 1% 10px 0;
+    font-size: 17px;
+  }
+
+  /* book-store sec end */
+
+  /* help-sec start */
+
+  .help-btn a {
+    padding: 14px 4%;
+    font-size: 15px;
+  }
+
+  /* help-sec end */
+
+  /* footer start */
+
+  .copyright {
+    font-size: 11px;
   }
 
   /* footer end */
